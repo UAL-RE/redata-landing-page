@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+
+    <link rel="me" href="https://mastodon.social/@redata">
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Proxima Nova font. -->
+    <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- Arizona Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/az-icons/1.0.0/az-icons-styles.css" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  
+    <!-- Arizona Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/main/css/arizona-bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
+    
+
+    <title>ReDATA - The University of Arizona Libraries</title>
+    <meta content="Information page for ReDATA - The University of Arizona Research Data Repository" name="description">
+    <meta content="data repository,data sharing,open access,figshare,redata information,redata help,uarizona publish data,arizona data" name="keywords">
+    
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <script>
+    window.addEventListener('load', () => {
+        AOS.init({
+          duration: 300,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        })
+    });
+    </script>
+    
+    <script>
+    /**
+     * Function to get a specific GET parameter from the URL.
+     * @param {string} name - The name of the GET parameter to retrieve.
+     * @returns {string|null} The value of the parameter, or null if not found.
+     */
+    function getUrlParameter(name) {
+        // Encode the name to handle special characters in the URL
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        // Create a regular expression to match the parameter in the URL search string
+        // The 'i' flag makes it case-insensitive
+        const regex = new RegExp("[\\?&]" + name + "=([^&#]*)", "i");
+        // Execute the regex against the current URL's search part (e.g., "?name=value&other=stuff")
+        const results = regex.exec(location.search);
+        // If results are found and the value exists, decode it to handle URL-encoded characters
+        // Otherwise, return null
+        return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    </script>
+    
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header class="bg-red arizona-header" id="header_arizona" role="banner">
+      <div class="container">
+        <div class="row">
+          <a class="arizona-logo" href="https://www.arizona.edu" title="The University of Arizona homepage">
+            <img class="arizona-line-logo" alt="The University of Arizona Wordmark Line Logo White"
+            src="https://cdn.digital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg" />
+          </a>
+
+          <section class="ml-auto d-none d-lg-block d-xl-block region region-header-ua-utilities"></section>
+        </div>
+      </div>
+    </header>
+    
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="zoom-in">
+              <div class="col-lg-6"><a href="https://arizona.figshare.com">
+                <img  src="assets/img/ReDATA Text only with shadow.png" class="img-fluid d-block mx-auto" style="width:50%;margin-top: 30px;
+    margin-bottom: 30px;" alt="Responsive image"></a>
+              </div>
+            </div>
+            <div class="row justify-content-center pb-4" data-aos="fade-up">
+                <div class="col-md-auto text-center alert alert-warning">
+                    The DOI <span id="paramDOI" style="font-weight:bold"></span> is reserved but inactive because the dataset it refers to has not yet been published.
+                    <span id="linkSpan" style="display:none">The preliminary data can be accessed at <a id="paramLink" href="#">unavailable</a>. Please contact <a href="mailto:data-management@arizona.edu">the ReDATA administrator</a> with any questions.</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="bg-warm-gray py-5" role="contentinfo">
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-sm-5 col-md-4 col-lg-4 text-center-xs text-left-not-xs">
+                <div class="row bottom-buffer-30">
+                  <div class="col">
+                    <a href="https://data.library.arizona.edu" title="University of Arizona Libraries | Data Cooperative" rel="home" class="qs-site-logo d-block mt-0">
+                      <img class="img-fluid" src="assets/img/Data_Cooperative_Webheader.png" alt="University of Arizona Libraries | Data Cooperative"
+                      typeof="foaf:Image" />
+                    </a>
+                  </div>
+                </div>
+                <br>                
+              </div>
+              <!-- Force next columns to break to new line at md breakpoint and up -->
+              <div class="w-100 d-block d-sm-none"></div>
+              <div class="col text-center-xs text-right-not-xs">
+                <a href="https://trellis.tfaforms.net/72?tfa_4=7013n000001JG0H">Subscribe to the Data Cooperative Newsletter</a> <span class="material-icons-sharp display-5 m-1 text-muted">email</span>
+                <br>
+                <a href="mailto:data-management@arizona.edu">Administrative inquiries</a> <span class="material-icons-sharp display-5 m-1 text-muted">contact_mail</span><br><br>
+                <p>
+                    <a href="https://www.linkedin.com/company/redata-university-of-arizona" title="ReDATA LinkedIn"><i class="fab fa-linkedin" style="color: #495057"></i></a>
+                    <a href="https://www.instagram.com/uaz_redata/" title="ReDATA Instagram"><i class="fab fa-instagram" style="color: #495057"></i></a>
+                    <a href="https://mastodon.social/@redata" title="ReDATA Mastodon"><i class="fab fa-mastodon" style="color: #495057"></i></a>
+                    <a href="https://bsky.app/profile/redata.bsky.sociala" title="ReDATA BlueSky"><i class="fab fa-bluesky" style="color: #495057"></i></a>
+                </p>
+              </div>
+              <div class="col-12">
+                <hr />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="footer_sub">
+          <div class="container">
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row">
+              <div class="col text-center">
+                <p class="small">
+                  <a href="https://www.arizona.edu/information-security-privacy" target="_blank">University Information Security
+                  and Privacy</a>
+                </p>
+                <p class="small">© 2025 The Arizona Board of Regents on behalf of 
+                <a href="https://www.arizona.edu" target="_blank">The University of Arizona</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Arizona Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js" integrity="sha384-MYL22lstpGhSa4+udJSGro5I+VfM13fdJfCbAzP9krCEoK5r2EDFdgTg2+DGXdj+" crossorigin="anonymous"></script>
+    <!-- Arizona Bootstrap -->
+    <script src="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/main/js/arizona-bootstrap.bundle.min.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+  </body>
+  <script>
+    const paramSpan = document.getElementById("paramDOI");
+    const paramA = document.getElementById("paramLink");
+
+    if (paramSpan) {
+        const nameParam = getUrlParameter("doi");
+        if (nameParam) {
+            paramSpan.textContent = new Option(nameParam).innerHTML; //escape html
+        }
+    }
+    if (paramA) {
+        const nameParam = getUrlParameter("l");
+        if (nameParam) {
+            paramA.href = "https://figshare.com/s/" + new Option(nameParam).innerHTML;
+            paramA.text = "https://figshare.com/s/" + new Option(nameParam).innerHTML;
+            document.getElementById("linkSpan").style.display = "inline";
+        }
+    }
+  </script>
+</html>
